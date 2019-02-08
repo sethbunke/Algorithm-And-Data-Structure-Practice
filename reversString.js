@@ -63,5 +63,5 @@ let reverseString = text => text === "" ? "" : reverseString(text.substr(1)) + t
 
 
 // function reverseString(text) {
-//     return text.split("").reduce((acc, char) => char + acc, '')
+//     return [...text].reduce((acc, char) => char + acc, '')
 // }
