@@ -60,3 +60,8 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 let reverseString = text => text === "" ? "" : reverseString(text.substr(1)) + text[0];
 
 //reverseString('hello');
+
+
+// function reverseString(text) {
+//     return text.split("").reduce((acc, char) => char + acc, '')
+// }
