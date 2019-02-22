@@ -1,4 +1,4 @@
-
+//Big O(n^2)
 let selectionSort = arr => {
 
     for(let i = 0; i < arr.length - 1; i++) {
@@ -16,9 +16,12 @@ let selectionSort = arr => {
 
         }
 
-        let temp = arr[i]; 
-        arr[i]= arr[minValIndex];
-        arr[minValIndex] = temp; 
+        if (i !== minValIndex) {
+            let temp = arr[i]; 
+            arr[i]= arr[minValIndex];
+            arr[minValIndex] = temp; 
+        }
+        
     }
 
     return arr;
