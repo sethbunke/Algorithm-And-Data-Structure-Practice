@@ -30,7 +30,9 @@ let merge = (arr1, arr2) => {
 
     return result;
 }
-
+//Big O(n log n)
+// log n from the number of decompositions (dividing in half until down to array of 1)
+// n is from the nubmer of comparisons per recomposition
 let mergeSort = (arr) => {
     if (arr.length <= 1) return arr;
 
@@ -45,15 +47,6 @@ let mergeSort = (arr) => {
     let merged = merge(ml, mr);
 
     return merged; 
-
-    // let output = [];
-    // if (m1 < mr) {
-    //     output.push(ml);
-    // }
-    // else {
-    //     output.push(mr);
-    // }
-
 }
 
 
