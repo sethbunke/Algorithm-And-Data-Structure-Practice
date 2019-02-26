@@ -33,6 +33,7 @@ let merge = (arr1, arr2) => {
 //Big O(n log n)
 // log n from the number of decompositions (dividing in half until down to array of 1)
 // n is from the nubmer of comparisons per recomposition
+//space complexity O(n)
 let mergeSort = (arr) => {
     if (arr.length <= 1) return arr;
 
