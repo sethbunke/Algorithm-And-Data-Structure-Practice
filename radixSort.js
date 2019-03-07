@@ -9,7 +9,7 @@ let getDigit = (num, i) => {
     return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
 }
 
-let x = getDigit(12345, 0);
+let x = getDigit(44, 3);
 console.log(x);
 
 
@@ -36,3 +36,47 @@ let mostDigits = nums => {
 let data = [1,23,55555,666666,444];
 let md = mostDigits(data);
 console.log(md);
+
+
+let radixSort = nums => {
+    let maxDigitCount = mostDigits(nums);
+    
+    for (let k = 0; k < maxDigitCount; k++) {
+        let digitBuckets = Array.from({length: 10}, () => []);
+        for (let i = 0; i < nums.length; i++) {
+            let digit = getDigit(nums[i], k); 
+            digitBuckets[digit].push(nums[i]);            
+        }
+        nums = [].concat(...digitBuckets);
+    }
+    return nums;
+}
+
+
+// let radixSort = input => {
+//     let mostDigits = mostDigits(input);
+//     let data = [];
+    
+
+//     for (let i = 0; i < mostDigits; i++) {
+//         for (let i = 0; i <= 9; i++) {
+//             let result = input.fitler(x => getDigit(x. i) === i) //input.filter(x => mostDigits())
+//             data[i] = result;
+//         }
+//         //recrate list by going through buckets
+
+//     }
+// }
+
+
+// use the math to determine the number of 
+// let dict = 
+// {
+//     "3": "hundreds",
+//     "4": "thousands"
+// }
+
+
+let rdta = [2, 5, 66, 901929, 400, 920, 5, 4, 890, 8]
+let rResult = radixSort(rdta)
+console.log(rResult);
