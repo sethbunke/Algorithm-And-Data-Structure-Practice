@@ -37,7 +37,7 @@ let data = [1,23,55555,666666,444];
 let md = mostDigits(data);
 console.log(md);
 
-
+//O(nk) for best, average, and worst; space O(n + k)
 let radixSort = nums => {
     let maxDigitCount = mostDigits(nums);
     
@@ -77,6 +77,6 @@ let radixSort = nums => {
 // }
 
 
-let rdta = [2, 5, 66, 901929, 400, 920, 5, 4, 890, 8]
+let rdta = [3,6,1,9,2,7]; //[2, 5, 66, 901929, 400, 920, 5, 4, 890, 8]
 let rResult = radixSort(rdta)
 console.log(rResult);
